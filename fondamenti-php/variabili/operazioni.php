@@ -10,7 +10,7 @@
 
 <body>
     <?php
-    $a = 10;
+    $a = 100;
     $b = 2;
     $c = $a + $b;
     echo '$c = ' . $c;
@@ -95,6 +95,55 @@
     $a = $c;
     
     echo "dopo a = $a e b = $b <br>";
+
+    echo "<hr>";
+    //operatore ++ e --
+    echo "prima a = $a <br>";
+    // $a++; // $a = $a + 1; ma utilizzo il valore iniziale di $a e poi lo incremento
+    //++$a; // $a = $a + 1; ma incremento di 1 il valore iniziale di $a ed utilizzo il nuovo valore di $a incrementato
+    echo "ora a =". $a++ ." <br>";
+    echo "dopo ".'$a++'." a = $a <br>";
+    
+    echo "prima a = $a <br>";
+    // $a++; // $a = $a + 1; ma utilizzo il valore iniziale di $a e poi lo incremento
+    //++$a; // $a = $a + 1; ma incremento di 1 il valore iniziale di $a ed utilizzo il nuovo valore di $a incrementato
+    echo "ora a =". $a-- ." <br>";
+    echo "dopo ".'$a--'." a = $a <br>";
+    
+    echo "<hr>";
+    //operatori logici
+ 
+    //&& oppure AND
+
+    $x = 100;
+    $compreso = ($x >= $a) && ($x <= $b);
+    echo $compreso == true ? "x compreso" : "x non compreso";
+
+    echo "<br>";
+    $compreso = ($x >= $a) AND ($x <= $b);
+    echo $compreso == true ? "x compreso" : "x non compreso";
+    
+    echo "<br>";
+    //$compreso = ($x >= $a) AND ($x <= $b);
+    echo ( ($x >= $a) AND ($x <= $b) ) ? "x compreso" : "x non compreso";
+    
+    // || oppure OR
+    
+    //possono entrare solo  le persone che si chiamano mario o giovanni
+    
+    echo "<br>";
+
+    $nome1 = "Mario";
+    $nome2 = "Giuseppe";
+    $nome = "Mario";
+
+    echo "Sono $nome ! <br>";
+
+    $nome_corretto = (($nome == $nome1) or ($nome == $nome2)) ? "nome corretto" : "nome non corretto";
+    echo $nome . " " . $nome_corretto;
+
+
+
 
     ?>
 </body>
