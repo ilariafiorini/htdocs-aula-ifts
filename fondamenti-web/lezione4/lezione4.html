@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 4</title>
+</head>
+<body>
+<h1>Lezione 4 - Form</h1>   
+<form action="inviadati.php" method="POST" name="contatti">
+    <h2>Contatta l'azienda</h2>
+    <fieldset>
+        <legend>Dati Anagrafici</legend>
+        <label for="nominativo">Nominativo:</label>
+        <input type="text" name="nominativo" id="nominativo" tabindex="2" autocomplete="off" >
+        <label for="email">E-Mail*:</label>
+        <input type="email" name="email" id="email" tabindex="1" required multiple>
+    </fieldset>
+    <fieldset>
+        <legend>Dati di Residenza</legend>
+        <label for="indirizzo">Indirizzo:</label>
+        <input type="text" name="indirizzo" id="indirizzo" autofocus>
+        <label for="cap">CAP:</label>
+        <input type="text" name="cap" id="cap" >
+        <label for="localita">Località:</label>
+        <input type="text" name="localita" id="localita" >
+        <label for="provincia">Provincia:</label>
+        <input type="text" name="provincia" id="provincia" >
+    </fieldset>
+    <fieldset>
+        <legend>Dati di Accesso</legend>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="inserisci username">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+    </fieldset>
+    <div>
+    <label for="messaggio">Messaggio</label>
+    <textarea name="messaggio" id="messaggio" cols="30" rows="10" placeholder="Messaggio"></textarea>
+    <div>
+    <section id="hobbies">
+        <h2>Sport Preferiti</h2>
+        <label for="calcio">calcio</label>
+        <input type="checkbox" name="chkCalcio" id="calcio" disabled>
+        <label for="tennis">tennis</label>
+        <input type="checkbox" name="chkTennis" id="tennis">
+        <label for="basket">basket</label>
+        <input type="checkbox" name="chkBasket" id="basket">
+        <label for="volley">volley</label>
+        <input type="checkbox" name="chkVolley" id="volley">
+        <!-- 
+            Camel Case: chkTennis ttRagioneSociale
+            Pascal Case: Gatto AziendaEstera
+            Snake Case: chk_tennis
+            Kebab Case chk-tennis
+        -->
+    </section>
+
+    <section id="forma-societaria">
+        <h2>Forma sociale dell'Azienda</h2>
+        <label for="spa">SpA</label>
+        <input type="radio" name="radFormaSociale" id="spa" value="1">
+        <label for="srl">Srl</label>
+        <input type="radio" name="radFormaSociale" id="srl" value="2" checked>
+        <label for="snc">Snc</label>
+        <input type="radio" name="radFormaSociale" id="snc" value="2">
+        
+    </section>
+
+    <section id="dati-nascita">
+        <h2>Estremi certificato di nascita:</h2>
+        <label for="comune-nascita">Comune di Nascita</label>
+        <select name="comune-nascita" id="comune-nascita">
+            <optgroup label="Emilia Romagna">
+                <option value="Rimini">Rimini</option>
+                <option value="Forli">Forlì</option>
+                <option value="Cesena">Cesena</option>
+                
+            </optgroup>
+            <optgroup label="Marche">
+                
+                <option value="Pesaro">Pesaro</option>
+                <option value="Urbino">Urbino</option>
+            </optgroup>
+        </select>
+        
+    </section>
+
+    <fieldset>
+        <legend>Altri Campi</legend>
+        <label for="curriculum">Curriculum Vitae</label>
+        <input type="file" name="curriculum" id="curriculum">
+        <input type="hidden" name="id-utente" value="10">
+        <label for="colore-preferito">Colore Preferito</label>
+        <input type="color" name="colore-preferito" id="colore-preferito">
+        <label for="mese-preferito">Mese Preferito</label>
+        <input type="month" name="mese-preferito" id="mese-preferito">
+        <label for="giudizio">Esprimi un giudizio</label>
+        <input type="number" name="giudizio" id="giudizio" min="1" max="10">
+    </fieldset>
+
+
+    <h2>Pulsanti di Invio</h2>
+
+    <input type="submit" value="Richiedi Informazioni">
+    <input type="reset" value="Annulla Form">
+    <button type="submit">
+        <b>Richiedi informazioni 2</b>
+    </button>
+    <button type="reset">
+        Annulla Form 2
+    </button>
+    <div>
+        <button id="calcola-cf" type="button">
+            Calcola Codice Fiscale
+        </button>
+    </div>
+</form>
+</body>
+</html>
