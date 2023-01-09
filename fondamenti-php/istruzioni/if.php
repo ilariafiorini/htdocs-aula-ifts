@@ -51,9 +51,64 @@
         echo "condizione falsa!<br>";
         $m = $y;
     }
-    echo "il max tra $x e $y è $m <br>"
+    echo "il max tra $x e $y è $m <br>";
+
+    echo "<hr>";
+    
+    //Un supermercato offre una politica di sconto ai propri clienti: con l’acquisto di 3 prodotti 
+    //applica il 10% di sconto sull’oggetto meno costoso. Determinare il totale 
+    //(imponibile + iva, supponendo l’iva al 22%)
+
+    $p1 = 10; //costo prodotto 1
+    $p2 = 9; //costo prodotto 2
+    $p3 = 8; //osto prodotto 3
+
+    //trovare il minore dei 3 costi
+
+    if ($p1<$p2){
+        if($p1<$p3){
+            $min = $p1;
+            echo "$p1 minore";
+            $p1 = $p1 * 0.9;
+            //$tot = ($p1 * 0.9) + $p2 * $p3;
+        }else{
+            $min = $p3;
+            echo "$p3 minore";
+            $p3 = $p3 * 0.9;
+            //$tot = $p1 + $p2 + ($p3 * 0.9);
+        }
+    }else{
+        if ($p2<$p3){
+            $min = $p2;
+            echo "$p2 minore";
+            $p2 = $p2 * 0.9;
+            //$tot = $p1($p2 * 0.9) + $p3;
+        }else{
+            $min = $p3;
+            echo "$p3 minore";
+            $p3 = $p3 * 0.9;
+            //$tot = $p1 + $p2 + ($p3 * 0.9);
+            
+        }
+
+    }
+    $tot = $p1 + $p2 + $p3;
+    echo "<br>totale = $tot";
+    echo "<br>".'$tot' . "= $tot";
+    echo "<br>".'$p1' . "= $p1";
+    echo "<br>".'$p2' . "= $p2";
+    echo "<br>".'$p3' . "= $p3";
+
+    //scorporo l'iva
+    $iva = 22;
+    $imponibile = $tot / (100 + $iva) * 100;
+    $quotaiva = $tot - $imponibile;
+    echo "<br>imponibile = $imponibile";
+    echo "<br>iva = $quotaiva";
+
     
 
     ?>
+
 </body>
 </html>
