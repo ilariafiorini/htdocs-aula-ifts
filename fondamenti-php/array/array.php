@@ -24,7 +24,8 @@
     echo $a[1] . " " . $a[2] . " " . $a[3] . " " . $a[4] . " ";
     //inizializzo l'array
     for ($i = 0; $i < 10 ; $i++){
-        $a[$i]=$i;
+        //$a[$i]=$i;
+        $a[$i]= rand(0,100);
     }
 
     echo "<hr>";
@@ -40,7 +41,13 @@
     for ($i = 0; $i < 10 ; $i++){
         echo "a".($i+1)."=[{$a[$i]}] ";
     }
+    
+    //compiti per casa: media degli elementi dell'array
+
     ?>
     
+    
+
+
 </body>
 </html>
