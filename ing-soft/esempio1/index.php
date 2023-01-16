@@ -8,9 +8,15 @@
 </head>
 <body>
     <?php
-    $pippo = 0;
-    echo "ciao  mondo";
-    $pippo = 1;
+
+    // $pippo = 0;
+    // echo $pippo."<br>";
+    // echo "ciao  mondo <br>";
+    // $pippo = 1;
+    // echo $pippo."<br>";
+    
+        echo 'ciao mondo!';
+
     ?>
 </body>
 </html>
