@@ -25,6 +25,7 @@
     // echo $a[1] . " " . $a[2] . " " . $a[3] . " " . $a[4] . " ";
     
     //inizializzo l'array
+    $a = [];
     for ($i = 0; $i < 10 ; $i++){
         //$a[$i]=$i;
         $a[$i]= rand(0,100);
