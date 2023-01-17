@@ -50,10 +50,17 @@
     //echo "<table border=1><tr>"
     echo"<table border=1 style='border-collapse: collapse;'><tr>";
     echo "<td>l'abitante più anziano ha: $max_eta  anni<br>";
-    echo "ci sono: $num_neonati  neonati<br></td></tr></table>";
+    echo "ci sono: $num_neonati  neonati<br>";//</td></tr></table>";
     echo "<hr>";
-    echo " età media dei maggiorenni:" . (($somma_eta_maggiorenni-($somma_eta_maggiorenni%$num_maggiorenni)) / $num_maggiorenni) . "<br>";
-    echo "ci sono $num_maggiorenni  maggiorenni, quindi occorrono $num_maggiorenni schede elettorali<br>";
+    if ($num_maggiorenni > 0){
+        echo "L'età media dei maggiorenni è di " . (($somma_eta_maggiorenni-($somma_eta_maggiorenni%$num_maggiorenni)) / $num_maggiorenni) . " anni<br>";
+        echo "Ci sono $num_maggiorenni  maggiorenni, quindi occorrono $num_maggiorenni schede elettorali<br>";
+        
+    } else {
+        echo "Non ci sono maggiorenni, quindi non occorrono schede elettorali<br>";
+
+    }
+    echo "</td></tr></table>";
     
     //print_r($eta) //NON VA BENE;
     // echo "<hr>";
