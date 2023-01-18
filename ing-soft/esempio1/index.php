@@ -15,10 +15,16 @@
      */
 
     function fattoriale($valore){
-        if ($valore == 1){
-            return 1;
+        if ($valore <= 0){
+            return 0;
+
         } else {
-            return fattoriale($valore - 1) * $valore;
+            if ($valore == 1){
+                return 1;
+            } else {
+                return fattoriale($valore - 1) * $valore;
+            }
+            
         }
     } //fattoriale
 
