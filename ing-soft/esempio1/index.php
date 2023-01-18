@@ -28,9 +28,9 @@
     // $pippo = 1;
     // echo $pippo."<br>";
     
-        echo 'ciao mondo!';
+        echo 'ciao mondo! <br>';
         for($i=0;$i < 10; $i++){
-        echo $i;
+        echo $i."<br>";
         }
 
     ?>
