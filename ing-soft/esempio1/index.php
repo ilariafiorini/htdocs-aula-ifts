@@ -20,19 +20,24 @@
         } else {
             return fattoriale($valore - 1) * $valore;
         }
-    }
+    } //fattoriale
 
     // $pippo = 0;
     // echo $pippo."<br>";
     // echo "ciao  mondo <br>";
     // $pippo = 1;
     // echo $pippo."<br>";
-    
-        echo 'ciao mondo! <br>';
-        for($i=0;$i < 10; $i++){
-        echo $i."<br>";
-        }
-
+    $a1 = [];
+    $a2 = [];
+    echo 'ciao mondo! <br>';
+    for($i=0;$i < 10; $i++){
+        $a1[$i] = $i;
+        $a2[$i] = fattoriale($i);
+    echo $i."<br>";
+    } //for
+    for ($i = 0; $i < 10; $i++) {
+        echo "{$a1[$i]} => {$a2[$i]} <br>";
+    }       
     ?>
 </body>
 </html>
