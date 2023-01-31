@@ -57,10 +57,12 @@
     }
     echo "</table>";
 
-
+    
     //per casa ripetere la tavbella sopra 
     //senza conoscere le chiavi dei singoli elementi di $s 
     // (con due foreach innestati)
+
+
     ?>
     
 </body>
