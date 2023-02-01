@@ -141,8 +141,14 @@
         // 
         $nome_corso = $studente['corso'];
         //if esiste la chiave $nome_corso
-        $partecipanti_corsi[$studente[$nome_corso]]++;
+        if (array_key_exists($nome_corso,$partecipanti_corso)){
+
+            $partecipanti_corsi[$studente[$nome_corso]]++;
+        }
         else $partecipanti_corsi[$studente[$nome_corso]]=1;
+
+
+        //guardare:  https://www.php.net/manual/en/function.array-key-exists.php
 
     }
 
