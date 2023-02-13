@@ -1,0 +1,32 @@
+Esercizio PHP
+
+Sono forniti i 2 array elencati di seguito:
+$p1 = [“Primini Primo”, “Secondini Secondo”];
+$p2 = [“Giannini Gianni”, “Stefanini Stefano”, “Mariolini Maria”,”Giacomini Giacomo”],
+$p3 = [“Violetti Viola”,”Gaietti Gaia”];
+$partecipanti= [$p1, $p2, $p3];
+$corsi = [“Autocad”,”Informatica”,”Inglese”];
+Nell’array bidimensionale $partecipanti ogni elemento rappresenta un array di partecipanti ai
+vari corsi svolti dall&#39;ente di formazione Enaip. I singoli array $p1, $p2, ecc contengono i
+cognomi e nomi dei partecipanti ad un corso specifico.
+L’array $corsi contiene i nomi dei corsi, nello stesso ordine del primo, cioè il corso Autocad è
+stato seguito dai partecipanti elencati in $p1, Informatica è stato seguito dai partecipanti di $p2,
+ecc.
+Si chiede di svolgere le seguenti attività:
+1. aggiungere il nuovo partecipante “Novella Novellini” al corso di Informatica
+2. elencare i nomi di tutti i partecipanti (di tutti i corsi)
+3. calcolare il numero medio dei partecipanti ai corsi
+4. indicare il nome del corso con il maggior numero di partecipanti
+5. tutti i partecipanti devono superare un esame di selezione, che si svolge nello stesso
+giorno e con la stessa commissione: scrivere il nome del partecipante che sarebbe il
+primo in ordine alfabetico a sostenere l&#39;esame (tra tutti i partecipanti di tutti i corsi).
+6. si chiede di aggiungere in fondo ad ogni array dei partecipanti un ulteriore elemento, con
+chiave &#39;corso&#39; e valore il nome del corso, fornito nel secondo array.
+
+---
+Svolgere le stesse attività richieste sopra (escluso il punto 6) con questi array:
+$s1=[‘cognome’=&gt;”Primini”, ‘nome’=&gt;”Primo”,’corso’ =&gt;
+“Autocad”];$s2=[‘cognome’=&gt;”Secondini”, ‘nome’=&gt;”Secondo”,’corso’ =&gt; “Autocad”];
+$s3=[‘cognome’=&gt;”Giannini”, ‘nome’=&gt;”Gianni”,’corso’ =&gt; “Informatica”];
+…
+$studenti = [$s1, $s2, $s3, …];
