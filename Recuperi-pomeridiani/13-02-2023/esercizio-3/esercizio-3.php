@@ -12,17 +12,30 @@
     $domanda2 = array('categoria' => 'assistenza', 'risposta_corretta' => 1);
     $domanda3 = array('categoria' => 'assistenza', 'risposta_corretta' => 0);
     $domande = [$domanda1, $domanda2, $domanda3];
-    //copio le categorie in un array
+   
+    //1. elencare le categorie delle domande (senza ripetizione!)
 
-
+    // inizializzo un'array enumerativo che racchiude tutte le categorie delle domande
+    // e lo inizializzo con òla categgoria della prima $domanda dell'array $domande
+    $categorie = [$domanda[1]['categoria']];
+ 
     
+    foreach ($domande as $domanda) {
+    
+    }
+
+
+
+
+
+  /*   
     /**
      * restituisce la categoria più tutilizzata
      *
      * @param array $domande
      * @return string
      */
-    function most_user($domande){
+   /*  function most_user($domande){
         //copio le categorie in un array
         $elenco_categorie = [];
         foreach ($domande as $domanda){
@@ -31,7 +44,7 @@
             }            
         }
 
-    }
+    } */ 
     ?>
     
 </body>
