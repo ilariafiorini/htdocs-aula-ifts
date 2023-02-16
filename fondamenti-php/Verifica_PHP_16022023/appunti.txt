@@ -1,0 +1,4 @@
+$a['chiave']='valore';
+$a[]='valore;
+$a=[1 => 'pippo', 2 =>'pluto];
+
