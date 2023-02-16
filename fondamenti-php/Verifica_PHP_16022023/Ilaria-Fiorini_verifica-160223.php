@@ -33,9 +33,16 @@
                     
                 }
             }
-            $camera['mese']=date('n');
-            
+            //$camera['mese']=date('n'); //non va perchè $camera è una copia locale e temporanea
+            // del riferimento all'array preso in considerazione
+
         }
+        
+        for( $i=0; $i < count($camere) ; $i++ ){
+            $camere[$i]['mese']=date('n');
+        }
+        var_dump($camere);
+
         echo "<br>L' incasso totale è: ".number_format($incasso_totale,2, ",",".").' €'; 
         echo '<br>la camera top è la camera: '.$camera_top.'e ha incassato: '.number_format($incasso_top,2, ",",".").' €';
 
