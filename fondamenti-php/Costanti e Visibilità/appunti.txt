@@ -1,0 +1,15 @@
+Le costanti è preferibile descriverle con lettere MAIUSCOLE
+
+define("ENTE","EnAip Centro Zavatta"); definisco la costante ENTE col valore "EnAip Centro Zavatta"
+echo ENTE;
+le costanti hanno visiblità globale => anche dentro le funzioni
+$a = 1;
+function esempio(){
+
+    echo $a; errore!!!! $a è definita all'esterno della funzione e quindi non è visibile all'interno della funzione
+    echo ENTE; ok!! la costante ha visibiltà globale per cui è visibile dentro alla funzione anche se definita fuori 
+
+    global $a; utilizzo la variabile globale $a esterna alla funzione
+    echo $a; adesso funzione e mi restituisce 1
+    N.B. ravanare con le variabili esterne alla funzione ha spesso effetti colaterali non controllabili perchè non si ha il controllo di chiama la funzione
+}

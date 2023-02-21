@@ -1,0 +1,37 @@
+<?php
+//definizione di classe
+class Esempio {        **le classi si nominano di norma con la lettera maiuscola iniziale
+function saluto(){     saluto è una funzione(metodo) dell classe Esempio 
+echo "Ciao";
+}
+}
+//istanza di un nuovo oggetto della classe Esempio
+$e = new Esempio();
+$e->saluto();
+?>
+
+
+Costruttore: il metodo __construct
+ Si può specificare un metodo distruttore __destruct
+
+N.B. tutte le funzioni definite con un  nome preceduto da due underscore sono detti metodi magici, in quanto vengono chiamati implicitamente 
+per esempio, se inizializzo un ggetto di una classe che ha definito un metodo __construct, la funzione __construct verrà implicitente chiamata per "costruire" l'oggetto
+
+
+
+<?php
+class Persona {
+// proprietà
+private $nome = ""; // qui $nome è una proprietà della classe che sto definendo
+//costruttore (metodo magico)
+public function __construct($nome){ // qui $nome è un parametro di ingresso  della funzione __construct che sto definendo
+//inizializzo la proprietà name
+$this -> nome = $nome; // associo alla proprietà nome di questa classe ($this) il parametro di ingresso ($nome) della funzione __construct
+}
+//metodo
+public function getName() {
+//$this rappresenta l'oggetto che sarà costruito a runtime
+return $this -> nome;
+}
+}
+?>
