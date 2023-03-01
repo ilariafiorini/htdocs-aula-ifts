@@ -35,3 +35,36 @@ return $this -> nome;
 }
 }
 ?>
+
+se ho un file esterno che contiene delle definizioni di classi [EX: esterno.php]
+le posso utilizzare del mio codice con include() [EX:include("esterno.php)]
+
+metodi e proprietà statiche
+
+class Persona {
+
+static public $numero
+stati public eta($data)
+}
+
+posso referenziarli richiamando la classe che li definisce 
+Persona :: eta('2000-01-01');
+$popolazione = Persona :: numero;
+
+Costanti dentro una classe
+
+class Persona {
+    const SPECIE="essere umano";
+}
+
+richiamo le costanti senza $:
+
+class Persona {
+    const SPECIE="essere umano";
+    __construct(){
+        echo SPECIE;
+    }
+
+}
+
+echo Persona ::SPECIE;
