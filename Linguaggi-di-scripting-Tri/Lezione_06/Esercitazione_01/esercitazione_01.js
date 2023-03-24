@@ -29,8 +29,9 @@ calcolaArea(){
 class Triangolo extends FiguraGeometrica{
     constructor (lato1, lato2, lato3){
         //let arrayLati = new Array([lato1,lato2,lato3]);
-        let arrayLati = [lato1,lato2,lato3];
-        super(arrayLati);
+        //let arrayLati = [lato1,lato2,lato3];
+        //super(arrayLati);
+        super([lato1,lato2,lato3]);
         this.lato1 = lato1;
         this.lato2 = lato2;
         this.lato3 = lato3;
@@ -96,10 +97,13 @@ class Cerchio extends FiguraGeometrica{
 }
 
 
-//let triangolo = new Triangolo(7,11,8);
-//console.log(triangolo.calcolaPerimetro());
-//console.log(triangolo.calcolaArea());
+let triangolo = new Triangolo(6,10,8);
+console.log(triangolo.calcolaPerimetro());
+console.log(triangolo.calcolaArea());
 
-let quadrato = new Quadrato(5);
+/*
+let quadrato = new Quadrato(13);
 console.log(quadrato.calcolaArea());
 console.log(quadrato.calcolaPerimetro());
+
+*/
