@@ -23,18 +23,14 @@
         //var_dump($lista_aree);
     ?>
 
-    <form action="elenco_citta.php" method="POST">
+    <form action="elenco_citta.php" method="GET">
         <select name="area_geografica">
             <?php
             foreach($lista_aree as $area){
                 echo "<option>".$area['area_geografica']."</option>";
             }
             ?>
-            <!-- <option>Sud</option>
-            <option>Centro</option>
-            <option>Nord-est</option>
-            <option>Nord-ovest</option>
-            <option>Isole</option> -->
+            
         </select>
         <button >OK</button>            
     </form>
