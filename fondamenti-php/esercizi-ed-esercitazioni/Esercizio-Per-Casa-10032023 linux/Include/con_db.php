@@ -1,5 +1,4 @@
 <?php
-//$con = "pippo";
 function fz_sql($sql, $binds = [],$dsn = "mysql:dbname=ifts;host=127.0.0.1",$login = "root",$passwd = "")
 {
     global $con;
