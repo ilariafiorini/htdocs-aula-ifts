@@ -118,7 +118,7 @@
                     echo("<tr><td>".$record['ute_id']."</td>");
                     echo("<td>".$record['ute_nome']."</td>");
                     echo("<td>".$record['ute_cognome']."</td>");
-                    echo("<td><a href="."./cambia_password.php?ID=".$record['ute_id'].">Cambia Password</a></td></tr>");
+</td></tr>");
                 }
             }
     
